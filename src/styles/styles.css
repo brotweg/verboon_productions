@@ -1,0 +1,487 @@
+/* fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&display=swap');
+
+/*colors*/
+
+:root {
+    --purple: hsl(255, 99%, 62%);
+    --light_blue: hsl(190, 74%, 70%, 100%);
+    --orange: hsl(24, 100%, 64%);
+    --white: #FFFFFF;
+    --black: #000;
+}
+
+/*general styles*/
+
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 550;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+main {
+    min-height: 80vh; /*add media queries for this*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    overflow: hidden;
+   /* background-image: url("../assets/wave_xlarge_vert.png");
+    background-position-x: right;
+    background-repeat: repeat-y;
+    background-size: 15%; */
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&display=swap');
+
+/*colors*/
+:root {
+    --purple: hsl(255, 99%, 62%);
+    --light_blue: hsl(190, 74%, 70%, 100%);
+    --orange: hsl(24, 100%, 64%);
+    --white: #FFFFFF;
+    --black: #000;
+}
+
+/*general styles*/
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 550;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2.1em;
+}
+
+h2,
+h3 {
+    color: var(--white);
+    font-family: Anton, serif;
+    font-weight: 250;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+p {
+    display: block;
+    font-size: 1em;
+}
+
+@media (orientation: portrait) {
+    p {
+        font-size: 1.7em;
+    }
+}
+
+section {
+    width: 100%
+}
+
+#home {
+    padding-top: 3.5em; /*add media queries for this*/
+    margin-bottom: 5em;
+}
+
+button {
+    font-weight: 550;
+}
+
+
+
+/* Sections */
+
+/*Home section*/
+
+
+
+.video {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.video_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+video {
+    height: calc(100vh - 2.8em);
+    max-width: 100vw;
+
+}
+
+@media only screen and (orientation: portrait) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.picture-element {
+    width: 100%;
+    height: 300px;
+    background-image: url("../assets/brug.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 0, /* right top */
+            100% 100%, /* right bottom */
+            0 90% /* left bottom */
+    );
+}
+
+
+
+/* portfolio section*/
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 4em;
+
+}
+
+.portfolio h2 {
+    margin-left: 10%;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    column-gap: 10px;
+}
+
+@media only screen and (orientation: portrait) {
+    .column {
+        flex-direction: column;
+        row-gap: 10px;/* Change to column layout on smaller screens */
+    }
+}
+
+.portfolio-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ensures the container takes the size of the image */
+    cursor: pointer;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show on hover */
+}
+
+@media (orientation: portrait) {
+    .overlay {
+        opacity: 1;
+    }
+}
+
+.subtitle {
+    font-size: inherit;
+    color: #ffffff;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: 30px;
+    background-color: var(--orange);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--orange);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal1 {
+
+}
+
+#modal2 {
+
+}
+
+#modal3 {
+
+}
+
+#modal4 {
+
+}
+
+.picture-element2 {
+    width: 100%;
+    height: 300px;
+    background-image: url("../assets/taxicab.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-attachment: fixed;
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 10%, /* right top */
+            100% 100%, /* right bottom */
+            0 100% /* left bottom */
+    );
+}
+
+/*About section*/
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 4em;
+}
+
+.about h2 {
+    margin-left: 10%;
+}
+
+
+article {
+    width: 60%;
+    clip-path: polygon(
+            0 0, /* left top */ 100% 10%, /* right top */ 100% 100%, /* right bottom */ 0 100% /* left bottom */
+    );
+    padding: 2em;
+    background-color: var(--black);
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+@media (orientation: portrait) {
+    article {
+        width: 80%;
+        padding: 2em;
+    }
+}
+
+
+article h3 {
+    color: var(--white);
+}
+
+article p {
+    color: var(--white);
+}
+
+article:nth-child(even) {
+    clip-path: polygon(
+            0% 0%,
+            100% 5%,
+            100% 100%,
+            0% 95%
+    );
+    align-self: flex-start;
+    background-color: var(--orange);
+    text-align: right;
+}
+
+article:nth-child(even) p {
+    color: var(--black);
+}
+article:nth-child(even) h3 {
+    color: var(--black);
+}
+
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: var(--orange);
+    margin: 0 auto;
+    clip-path: polygon(
+            0% 0%,
+            100% 5%,
+            100% 100%,
+            0% 95%
+    );
+}
+
+@media only screen and (orientation: portrait) {
+    .bio {
+        flex-direction: column;
+        width: 100%;
+        clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 100%,
+                0% 95%
+        );
+    }
+}
+
+.bio-image {
+    flex-grow: 0;
+    max-width: 40%;
+    object-fit: cover;
+
+}
+@media only screen and (orientation: portrait) {
+    .bio-image {
+        flex-grow: 1;
+        max-width: 100%;
+        padding: 2em;
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 100%,
+            0% 95%
+    );
+    }
+}
+
+
+.bio p {
+    flex-grow: 2;
+    padding: 2em;
+}
+
+@media only screen and (orientation: portrait) {
+    .bio p {
+        padding: 0em 2em 6em;
+    }
+
+}
+
+.work_img_container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.work_img_container img {
+    max-width: 32%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+@media (orientation: portrait) {
+    .work_img_container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .work_img_container img {
+        max-width: 100%;
+    }
+}
+
+/*form section*/
+
+.contact h2 {
+    color: var(--black);
+    margin-left: 10%;
+}
+
+@media (orientation: portrait) {
+    .contact h2 {
+        margin-top: 3em;
+    }
+}
+
+.contact p {
+    margin-left: 10%;
+    display: block;
+    width: 60%;
+}
+
+.contact {
+    background-color: var(--orange);
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 10%, /* right top */
+            100% 95%, /* right bottom */
+            0 100% /* left bottom */
+    );
+}
+

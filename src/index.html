@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verboon Productions</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+                <button onclick="scrollToSection('home')" class="logo"></button>
+
+            <div class="menu">
+                <button onclick="scrollToSection('portfolio')">Portfolio</button>
+                <button onclick="scrollToSection('about')">Missie & Visie</button>
+                <button onclick="scrollToSection('contact')">Contact</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="video" id="home">
+           <div class="video_inner">
+            <video controls autoplay muted>
+                <source src="./assets/showreel.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </section>
+
+        <!--- <div class="picture-element">        </div> ---!>
+
+        <section class="portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="column">
+                    <div class="image-container">
+                        <img class="portfolio-image" src="assets/boxing.jpg"/>
+                        <div class="overlay" id="img1">
+                            <h3 class="title">Title</h3>
+                            <p class="subtitle">Subtitle</p>
+                        </div>
+                    </div>
+                    <div id="modal1" class="modal">
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                        <!-- Modal Content (The Image) -->
+                        <div class="modal-content" id="content1">Hier content</div>
+                    </div>
+                    <div class="image-container">
+                        <img class="portfolio-image" src="assets/guitar.jpg"/>
+                        <div class="overlay" id="img2">
+                            <h3 class="title">Title</h3>
+                            <p class="subtitle">Subtitle</p>
+                        </div>
+                    </div>
+                    <div id="modal2" class="modal">
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                        <!-- Modal Content (The Image) -->
+                        <div class="modal-content" id="content2">Hier content</div>
+                    </div>
+                </div>
+                <div class="column">
+                <div class="image-container">
+                    <img class="portfolio-image" src="assets/babyshower.jpg"/>
+                    <div class="overlay" id="img3">
+                        <h3 class="title">Title</h3>
+                        <p class="subtitle">subtitle</p>
+                    </div>
+                </div>
+                    <div id="modal3" class="modal">
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                        <!-- Modal Content (The Image) -->
+                        <div class="modal-content" id="content3">Hier content</div>
+                    </div>
+                    <div class="image-container">
+                        <img class="portfolio-image" src="assets/dancing.jpg">
+                        <div class="overlay" id="img4">
+                            <h3 class="title">Title</h3>
+                            <p class="subtitle">Subtitle</p>
+                        </div>
+                    </div>
+                    <div id="modal4" class="modal">
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                        <!-- Modal Content (The Image) -->
+                        <div class="modal-content" id="content4">Hier content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!--- ><div class="picture-element2">        </div> ---!>
+
+        <section class="about" id="about">
+            <h2>Over Verboon Productions</h2>
+            <div class="bio">
+               <img src="assets/selfie.jpg" class="bio-image" />
+               <p>Mijn naam is Maarten en ik ben een foto-/videograaf uit Utrecht. Al
+                        van jongs af aan was ik gefascineerd door beelden. Op mijn 13e toverde ik mijn slaapkamer
+                        om tot filmstudio, waar ik met mijn webcam epische toneelstukken opnam en bewerkte tot
+                        'Oscarwaardige' films. Na mijn studie Biologie besloot ik mijn passie voor film en fotografie
+                        nieuw leven in te blazen, en van mijn hobby mijn carrière te maken.
+               </p>
+            </div>
+
+            <article class="mission">
+            <h3>Mijn missie:</h3>
+            <p>Unieke verhalen vertellen met beelden. Of het nu gaat om een interview, evenement,
+                portretshoot of een spectaculaire klus in weer en wind op een windmolen, ik ga altijd voor
+                het beste resultaat. Met mijn camera leg ik de essentie vast, met oog voor detail, emotie en
+                humor.
+            </p>
+            </article>
+            <article class="style">
+                <h3>Mijn stijl:</h3>
+                <p>Dynamisch, energiek en met een vleugje humor. Ik hou van beelden die bewegen, die
+                    emotie en kracht uitstralen. Het leven is te kort om saai te zijn, dus ook in mijn werk mag er
+                    gelachen worden.
+                </p>
+            </article>
+            <article class="work">
+                <h3>Mijn werk:</h3>
+                <p>Van interviews tot bedrijfsvideo's, van portretten tot actie shots, ik ben van alle markten
+                    thuis. Momenteel werk ik veel samen met een sportschool in de buurt, waar ik de energie en
+                    passie van de sporters vastleg in unieke beelden.
+                </p>
+                    <div class="work_img_container">
+                        <img src="./assets/sportschool_1.jpg" />
+                        <img src="./assets/sportschool_2.jpg" />
+                        <img src="./assets/sportschool_4.jpg" />
+                    </div>
+
+            </article>
+
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Jouw project</h2>
+            <p>Ben je op zoek naar iets unieks? Iets waar je met trots naar terug wilt kijken? Wil je je
+                website of bedrijfsvideo naar een hoger niveau tillen?</p>
+            <p>Neem contact met me op en we
+                bespreken samen de mogelijkheden.</p>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <label for="message"><textarea id="message" name="user_message" placeholder="Your message"></textarea></label>
+                    </li>
+                    <li class="input-fields">
+                        <label for="name"><input type="text" id="name" name="user_name" placeholder="Your name" /></label>
+                        <label for="email"><input type="email" id="email" name="user_email" placeholder="Your e-mail" /></label>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Send your message</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="address_box">
+            <p>Maarten Verboon</p>
+            <a href="mailto:verboonproductions@outlook.com">verboonproductions@outlook.com</a>
+        </div>
+        <div class="tags_box">
+            <img src="assets/tags-small.jpg"
+                 alt="Creative. Energy. Optimism. Power. (A hint of) Comedy. Inspiring." class="tags"/>
+        </div>
+
+    </footer>
+
+</body>
+
+
+
+    <script src="scripts/scroll.js"></script>
+<script src="scripts/modal.js"></script>
+
+</html>
