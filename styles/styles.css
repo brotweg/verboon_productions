@@ -31,10 +31,11 @@ main {
     flex-direction: column;
     background-color: var(--black);
     overflow: hidden;
-   /* background-image: url("../assets/wave_xlarge_vert.png");
-    background-position-x: right;
-    background-repeat: repeat-y;
-    background-size: 15%; */
+    background-image: url("/assets/the_spine.png");
+    background-repeat: no-repeat;
+    background-position-x: 115%;
+    background-position-y: -10%;
+    background-size: 60vh;
 }
 
 /* fonts */
@@ -317,7 +318,13 @@ video {
 .about {
     display: flex;
     flex-direction: column;
-    margin: 0 auto 4em;
+    background-image: url("/assets/the_bottom2.png");
+    background-size: 90vw;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: -50%;
+    padding-bottom: 10rem;
+
 }
 
 .about h2 {
@@ -331,7 +338,6 @@ article {
             0 0, /* left top */ 100% 10%, /* right top */ 100% 100%, /* right bottom */ 0 100% /* left bottom */
     );
     padding: 2em;
-    background-color: var(--black);
     align-items: flex-end;
     margin: 0 auto;
 }
@@ -456,6 +462,11 @@ article:nth-child(even) h3 {
     }
 }
 
+.work {
+    padding-bottom: 10em;
+}
+
+
 /*form section*/
 
 .contact h2 {
@@ -475,7 +486,9 @@ article:nth-child(even) h3 {
     width: 60%;
 }
 
+
 .contact {
+    margin-top: -6em;
     background-color: var(--orange);
     clip-path: polygon(
             0 0, /* left top */
