@@ -11,6 +11,8 @@ galleryPictures.forEach(picture => {
         modalImage.src = picture.src;
         // Display the modal
         modal.style.display = 'block';
+        document.body.classList.add('modal-open');
+
     });
 });
 
@@ -19,4 +21,5 @@ const closeBtn = modal.querySelector('.gallery-close');
 // When the user clicks on <span> (x), close the modal
 closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
 });

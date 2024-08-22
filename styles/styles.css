@@ -15,56 +15,6 @@
 /*general styles*/
 
 
-body {
-    margin: 0;
-    font-family: Inter, sans-serif;
-    font-weight: 550;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-}
-
-main {
-    min-height: 80vh; /*add media queries for this*/
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--black);
-    overflow: hidden;
-    background-image: url("/assets/the_spine.png");
-    background-repeat: no-repeat;
-    background-position-x: 115%;
-    background-position-y: -10%;
-    background-size: 60vh;
-}
-
-/*colors*/
-:root {
-    --purple: hsl(255, 99%, 62%);
-    --light_blue: hsl(190, 74%, 70%, 100%);
-    --orange: hsl(24, 100%, 64%);
-    --white: #FFFFFF;
-    --black: #000;
-}
-
-/*general styles*/
-body {
-    margin: 0;
-    font-family: Inter, sans-serif;
-    font-weight: 550;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--black);
-    overflow: hidden;
-}
-
 h2 {
     font-size: 3em;
 }
@@ -93,26 +43,113 @@ p {
     }
 }
 
-section {
-    width: 100%
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 550;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-#home {
-    padding-top: 3.5em; /*add media queries for this*/
-    margin-bottom: 5em;
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+main {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    overflow: hidden;
+    background-image: url("/assets/the_spine.png");
+    background-repeat: no-repeat;
+    background-position-x: 115%;
+    background-position-y: -10%;
+    background-size: 60vh;
+}
+
+section {
+    width: 100%
 }
 
 button {
     font-weight: 550;
 }
 
+/* Navbar */
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    color: #FFF;
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 0%, /* right top */
+            100% 80%, /* right bottom */
+            0 100% /* left bottom */
+    );
+}
+
+.logo {
+    background-image: url("../assets/logo.png"); /*Hier kun je evt het logo aanpassen*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 15px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 30%;
+    height: 50px;
+}
+
+@media (orientation: portrait) {
+    .logo {
+        height: 100px;
+    }
+    .menu {
+        font-size: 1.7em;
+    }
+}
+
+.menu {
+    margin: 15px 20px 0 0;
+    cursor: default;
+    align-self: flex-start;
+}
+
+.menu button {
+    border: 0;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1em;
+    padding: 0;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    color: var(--orange);
+}
 
 /* Sections */
 
-/*Home section*/
+/*Home section, de showreel */
 
-
+#home { /* Dit zorgt ervoor dat de video goed uitgelijnd is met de navbar */
+    padding-top: 3.5em;
+    margin-bottom: 5em;
+}
 
 .video {
     display: flex;
@@ -120,21 +157,17 @@ button {
     flex-grow: 1;
     align-content: center;
     justify-content: center;
-
 }
 
 .video_inner {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-
 }
 
 video {
     height: calc(100vh - 2.8em);
     max-width: 100vw;
-
 }
 
 @media only screen and (orientation: portrait) {
@@ -144,11 +177,12 @@ video {
     }
 }
 
+/* Einde van showreel*/
 
 .picture-element {
     width: 100%;
     height: 300px;
-    background-image: url("../assets/brug.jpg");
+    background-image: url("../assets/brug.jpg"); /*Hier kun je de foto van de gele brug evt aanpassen*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -160,7 +194,6 @@ video {
             0 90% /* left bottom */
     );
 }
-
 
 
 /* portfolio section*/
@@ -186,10 +219,10 @@ video {
     column-gap: 10px;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) { /* Change to column layout on smaller screens */
     .column {
         flex-direction: column;
-        row-gap: 10px;/* Change to column layout on smaller screens */
+        row-gap: 10px;
     }
 }
 
@@ -203,7 +236,6 @@ video {
     position: relative;
     display: inline-block; /* Ensures the container takes the size of the image */
     cursor: pointer;
-
 }
 
 .overlay {
@@ -241,12 +273,12 @@ video {
     display: none;
     position: fixed;
     z-index: 1001;
-    padding-top: 100px;
+    padding-top: 80px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
@@ -255,9 +287,26 @@ video {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
-    height: 30px;
-    background-color: var(--orange);
+    max-height: 80vh;
+    overflow-y: auto;
+    max-width: 60vw;
+    color: var(--white);
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none; /* Optional: hides scrollbar but not the scroll-ability */
+}
+
+
+.modal_video {
+    width: 100%;   /* Make video take the full width of modal content */
+    max-width: 100%;  /* Ensure video doesn't exceed modal content width */
+    height: auto;   /* Maintain aspect ratio of the video */
 }
 
 .close {
@@ -277,26 +326,12 @@ video {
     cursor: pointer;
 }
 
-#modal1 {
-
-}
-
-#modal2 {
-
-}
-
-#modal3 {
-
-}
-
-#modal4 {
-
-}
+/* Einde portfolio gedeelte*/
 
 .picture-element2 {
     width: 100%;
     height: 300px;
-    background-image: url("../assets/taxicab.jpg");
+    background-image: url("../assets/taxicab.jpg"); /* Hier kun je de foto van de taxi evt aanpassen*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -311,11 +346,10 @@ video {
 
 /*About section*/
 
-
 .about {
     display: flex;
     flex-direction: column;
-    background-image: url("/assets/the_bottom2.png");
+    background-image: url("/assets/the_bottom2.png"); /*Dit is de oranje wave aan de onderkant vd pagina*/
     background-size: 90vw;
     background-repeat: no-repeat;
     background-position-y: 100%;
@@ -328,11 +362,21 @@ video {
     margin-left: 10%;
 }
 
+article p  {
+    color: var(--white);
+}
+
+article h3 {
+    color: var(--white);
+}
 
 article {
     width: 60%;
     clip-path: polygon(
-            0 0, /* left top */ 100% 10%, /* right top */ 100% 100%, /* right bottom */ 0 100% /* left bottom */
+            0 0, /* left top */
+            100% 10%, /* right top */
+            100% 100%, /* right bottom */
+            0 100% /* left bottom */
     );
     padding: 2em;
     align-items: flex-end;
@@ -346,14 +390,6 @@ article {
     }
 }
 
-
-article h3 {
-    color: var(--white);
-}
-
-article p {
-    color: var(--white);
-}
 
 article:nth-child(even) {
     clip-path: polygon(
@@ -370,10 +406,10 @@ article:nth-child(even) {
 article:nth-child(even) p {
     color: var(--black);
 }
+
 article:nth-child(even) h3 {
     color: var(--black);
 }
-
 
 .bio {
     display: flex;
@@ -382,10 +418,10 @@ article:nth-child(even) h3 {
     background-color: var(--orange);
     margin: 0 auto;
     clip-path: polygon(
-            0% 0%,
-            100% 5%,
-            100% 100%,
-            0% 95%
+            0% 0%, /*left top*/
+            100% 5%, /*right top*/
+            100% 100%, /*right bottom*/
+            0% 95% /*left bottom*/
     );
 }
 
@@ -430,10 +466,11 @@ article:nth-child(even) h3 {
 
 @media only screen and (orientation: portrait) {
     .bio p {
-        padding: 0em 2em 6em;
+        padding: 0 2em 6em;
     }
 
 }
+
 
 .work_img_container {
     display: flex;
@@ -445,8 +482,8 @@ article:nth-child(even) h3 {
     max-width: 32%;
     height: auto;
     box-sizing: border-box;
+    cursor: pointer;
 }
-
 
 @media (orientation: portrait) {
     .work_img_container {
@@ -464,8 +501,7 @@ article:nth-child(even) h3 {
 }
 
 
-/*styling for gallery-modals*/
-
+/*styling voor de foto's en modals onderaan de bio*/
 
 .gallery-modal {
     display: none;
@@ -496,10 +532,9 @@ article:nth-child(even) h3 {
     object-fit: contain; /* Maintain aspect ratio */
 }
 
-
 .gallery-close {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 50px;
     color: var(--white);
     font-size: 40px;
@@ -546,4 +581,116 @@ article:nth-child(even) h3 {
             0 100% /* left bottom */
     );
 }
+
+/* Contactformulier begint hier */
+
+form {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    font-family: Inter, sans-serif;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+form li {
+    margin-bottom: 15px;
+}
+
+form textarea {
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    padding: 10px;
+}
+
+.input-fields {
+    min-width: 200px;
+
+}
+
+.input-fields input {
+    height: 30px;
+    padding: 10px;
+}
+
+form button {
+    padding: 15px;
+    font-size: 16px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 15%, /* right top */
+            100% 100%, /* right bottom */
+            0 100% /* left bottom */
+    );
+}
+
+form .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3em;
+}
+
+/* Footer begint hier*/
+
+footer {
+    background-color: var(--black);
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    font-family: Anton, sans-serif;
+    cursor: default;
+
+}
+
+.address_box {
+    width: 50%;
+    margin: 1.8em 0 1.8em;
+    border-right: 2px solid var(--white);
+    padding-right: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+footer a {
+    font-family: Anton, sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+
+.tags_box {
+    margin: 1.8em;
+}
+
+.tags {
+    height: 5em;
+}
+
+
 

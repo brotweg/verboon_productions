@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <title>Verboon Productions</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
-    <link rel="stylesheet" type="text/css" href="styles/footer.css">
-    <link rel="stylesheet" type="text/css" href="styles/form.css">
 </head>
 
 <body>
     <header>
         <nav>
-
-                <button onclick="scrollToSection('home')" class="logo"></button>
-
+            <button onclick="scrollToSection('home')" class="logo"></button>
             <div class="menu">
                 <button onclick="scrollToSection('portfolio')">Portfolio</button>
                 <button onclick="scrollToSection('about')">Missie & Visie</button>
@@ -22,6 +17,7 @@
             </div>
         </nav>
     </header>
+    <!--Hier begint het gedeelte met je showreel --->
     <main>
         <section class="video" id="home">
            <div class="video_inner">
@@ -32,72 +28,131 @@
             </div>
         </section>
 
-        <!--- <div class="picture-element">        </div> --->
+        <!-- Dit element bevat de foto van de gele brug, aanpassen foto kan in het css bestand --->
+        <div class="picture-element"> </div>
 
+        <!-- Dit is je portfolio --->
         <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio-container">
                 <div class="column">
+                    <!-- Hier begint Video 1 (bedrijfsevenementen videografie)) -->
                     <div class="image-container">
-                        <img class="portfolio-image" src="assets/boxing.jpg"/>
+                        <img class="portfolio-image" src="assets/luchtballon_screen.jpg"/> <!-- Hier foto 1ste video aanpassen --->
                         <div class="overlay" id="img1">
-                            <h3 class="title">Title</h3>
-                            <p class="subtitle">Subtitle</p>
+                            <h3 class="title">Bedrijfsevenementen Videografie</h3>
+                            <!--<p class="subtitle">Promotievideo voor REDPANDA.WORKS</p> -->
                         </div>
                     </div>
                     <div id="modal1" class="modal">
-                        <!-- The Close Button -->
                         <span class="close">&times;</span>
-                        <!-- Modal Content (The Image) -->
-                        <div class="modal-content" id="content1">Hier content</div>
+                        <div class="modal-content" id="content1">
+                            <video class="modal_video" controls>
+                            <source src="assets/bedrijfsevenementen_reel.mp4" type="video/mp4" > <!-- Hier kun je de 1ste video aanpassen -->
+                            Your browser does not support the video tag.
+                            </video>
+                            <!-- Hieronder kun je de tekst onder de video aanpassen. -->
+                            <p>Als videograaf heb ik al veel bijzondere momenten mogen vastleggen, maar de training op grote hoogte die ik voor Red Panda Works heb gefilmd, was echt uniek. Een luchtballon als setting brengt natuurlijk wat uitdagingen met zich mee—zoals snel de interviews opnemen vóór het opstijgen en met de drone de ballonnen volgen voor die spectaculaire beelden vanuit de lucht. Het was hectisch, maar juist dat maakt dit werk zo interessant en leuk.</p>
+                            <p>Ik heb ervaring met allerlei soorten bedrijfsvideo's, van korte interviews tot uitgebreide bedrijfsfilms en alles daartussenin. Wat ik vooral belangrijk vind, is om precies dat vast te leggen wat een evenement of bedrijf uniek maakt. Of het nu gaat om een dynamische aftermovie of een gedetailleerde trainingsvideo, ik zorg ervoor dat de video aansluit bij wat jouw bedrijf wil uitstralen.</p>
+                            <p>Ik werk graag nauw samen om ervoor te zorgen dat het eindresultaat niet alleen mooi is, maar ook echt vertelt wat je wilt overbrengen. Elke opdracht zie ik als een nieuwe uitdaging en een kans om iets bijzonders te maken.</p>
+
+                        </div>
                     </div>
+                    <!-- Hier begint video 2 (dans videografie) -->
                     <div class="image-container">
-                        <img class="portfolio-image" src="assets/guitar.jpg"/>
+                        <img class="portfolio-image" src="assets/dancing2.jpg"/> <!-- Aanpassen foto video 2 -->
                         <div class="overlay" id="img2">
-                            <h3 class="title">Title</h3>
-                            <p class="subtitle">Subtitle</p>
+                            <h3 class="title">Dans Videografie</h3> <!-- aanpassen titel -->
+                            <!-- <p class="subtitle">Creatieve video voor een dansgroep</p> Hier kan evt een subtitel-->
                         </div>
                     </div>
                     <div id="modal2" class="modal">
-                        <!-- The Close Button -->
                         <span class="close">&times;</span>
-                        <!-- Modal Content (The Image) -->
-                        <div class="modal-content" id="content2">Hier nog meer content</div>
+                        <div class="modal-content" id="content2">
+                            <video class="modal_video" controls>
+                                <source src="assets/dance_reel.mp4" type="video/mp4" > <!-- aanpassen video 2 -->
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Hieronder aanpassen tekst video 2 -->
+                            <p>Dans heeft iets magisch—de manier waarop beweging en muziek samenkomen, maakt het een van de mooiste vormen van expressie om vast te leggen. Toen ik een paar dansers in mijn gym zag oefenen, wist ik meteen dat ik dit moest filmen. Wat begon met één danscrew, groeide al snel uit tot meerdere. Elke keer weer ben ik onder de indruk van de energie en passie die dansers in hun routines steken.</p>
+                            <p>Het mooie aan dansvideografie is dat de choreografie meteen structuur biedt voor de video. Dit geeft me de kans om creatief te zijn en echt iets bijzonders neer te zetten. Bij het maken van muziekclips kan ik bijvoorbeeld meer spelen met effecten en de editing helemaal afstemmen op de beat, wat de video nog krachtiger maakt.</p>
+                            <p>Ik sta altijd open voor nieuwe dans- en muziekprojecten. Het is geweldig om de bewegingen, emoties en het verhaal van een dans vast te leggen en om samen met de dansers iets te creëren dat zowel visueel als muzikaal indruk maakt.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="column">
+                <!-- Hier begint video 3 (bruiloft videografie) --->
                 <div class="image-container">
-                    <img class="portfolio-image" src="assets/babyshower.jpg"/>
+                    <img class="portfolio-image" src="assets/wedding_cover.jpg"/> <!-- foto aanpassen -->
                     <div class="overlay" id="img3">
-                        <h3 class="title">Title</h3>
-                        <p class="subtitle">subtitle</p>
+                        <h3 class="title">Bruiloft Videografie</h3> <!-- titel aanpassen -->
+                        <!-- <p class="subtitle">subtitle</p> Hier evt subtitel -->
                     </div>
                 </div>
                     <div id="modal3" class="modal">
-                        <!-- The Close Button -->
                         <span class="close">&times;</span>
-                        <!-- Modal Content (The Image) -->
-                        <div class="modal-content" id="content3">Hier content</div>
+                        <div class="modal-content" id="content3">
+                            <video class="modal_video" controls>
+                                <source src="assets/wedding_reel.mp4" type="video/mp4" > <!-- aanpassen video 2 -->
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Hieronder tekst aanpassen -->
+                            <p>Bruiloften zijn een van de mooiste en meest memorabele momenten in het leven, en het is altijd een voorrecht om die speciale dag vast te mogen leggen. Als videograaf voel ik de verantwoordelijkheid om elk belangrijk moment, van de eerste blik tot het laatste feest, perfect in beeld te brengen. Er is maar één kans om het goed te doen, en dat maakt het werk niet alleen spannend, maar ook ontzettend belonend. Als het bruidspaar blij is met het resultaat, dan ben ik dat ook. </p>
+                            <p>Naast bruiloften leg ik ook graag andere bijzondere momenten vast, zoals familieshoots, zwangerschappen, en babyshowers. Deze mijlpalen in het leven verdienen het om op een mooie en betekenisvolle manier gedocumenteerd te worden. Voor mij is het geweldig om de vreugde en liefde in deze momenten te kunnen vastleggen en ze om te zetten in blijvende herinneringen.</p>
+                            <p>Of het nu gaat om een intieme ceremonie of een grootse viering, ik zorg ervoor dat jullie verhaal op een manier wordt verteld die recht doet aan de emotie en schoonheid van de dag. Het is mijn passie om deze momenten vast te leggen, zodat ze nog jaren later kunnen worden herbeleefd.</p>
+
+                        </div>
                     </div>
+                    <!-- hieronder begint video 4 (sport videografie) -->
                     <div class="image-container">
-                        <img class="portfolio-image" src="assets/dancing.jpg">
+                        <img class="portfolio-image" src="assets/sport_cover.jpg">
                         <div class="overlay" id="img4">
-                            <h3 class="title">Title</h3>
-                            <p class="subtitle">Subtitle</p>
+                            <h3 class="title">Sport Videografie</h3> <!-- titel aanpassen -->
+                            <!-- <p class="subtitle">Subtitle</p> hier evt subtitel -->
                         </div>
                     </div>
                     <div id="modal4" class="modal">
-                        <!-- The Close Button -->
                         <span class="close">&times;</span>
-                        <!-- Modal Content (The Image) -->
-                        <div class="modal-content" id="content4">Hier content</div>
+                        <div class="modal-content" id="content4"><video class="modal_video" controls>
+                            <source src="assets/sport_reel.mp4" type="video/mp4" > <!-- aanpassen video 2 -->
+                            Your browser does not support the video tag.
+                        </video>
+                            <!-- Hieronder tekst aanpassen -->
+                            <p>Sport zit vol energie en passie, en dat is precies wat ik graag vastleg met mijn camera. Om de hoek van mijn huis ligt een sportschool waar ik momenteel de marketing help versterken. Ik bedenk contentstrategieën, schiet alle beelden en zorg ervoor dat alles op het juiste moment wordt gepost. Het is geweldig om te zien hoe enthousiast en trots mensen zijn op wat ze kunnen bereiken, en die emoties breng ik graag over in mijn video's.</p>
+                            <p>Daarnaast had ik het voorrecht om te werken met een wereldkampioen waterskiën. Dat was een geweldige ervaring en een enorme eer. Het vastleggen van sportmomenten, of het nu in de sportschool is of op het water, biedt telkens weer nieuwe uitdagingen en mogelijkheden. Van snelle, actievolle clips tot meer persoonlijke portretten van atleten—ik zorg ervoor dat de energie en het verhaal van de sport in elke video tot leven komt.</p>
+                            <p>Voor mij draait sportvideografie om het vangen van die intense momenten van inspanning, succes en plezier. Ik werk graag samen om jouw sportieve prestaties op een krachtige en inspirerende manier te laten zien.</p>
+                        </div>
+
+                        <!-- Wil je in de toekomst meer video's toevoegen, dan kun je dit stuk kopieren en plakken. Verander de id's "img1" en "modal1" naar het eerste opvolgende nummer (als je de 5de video toevoegt dus 5).
+
+                        <div class="image-container">
+                            <img class="portfolio-image" src="assets/sport_cover.jpg">
+                            <div class="overlay" id="img1">
+                                <h3 class="title">Sport Videografie</h3>
+                                <p class="subtitle">Subtitle</p>
+                            </div>
+                        </div>
+                        <div id="modal1" class="modal">
+                        <span class="close">&times;</span>
+                        <div class="modal-content" id="content1"><video class="modal_video">
+                            <source src="assets/sport_reel.mp4" type="video/mp4" >
+                            Your browser does not support the video tag.
+                        </video>
+                         Hieronder tekst toevoegen in <p> tags.
+
+                        </div>
+
+                    einde stuk om te kopieren -->
+
                     </div>
                 </div>
             </div>
         </section>
+        <!-- einde portfolio gedeelte -->
 
-       <!--- ><div class="picture-element2">        </div> --->
+      <div class="picture-element2"> </div> <!-- In de css kun je de foto van de taxi aanpassen -->
 
+        <!-- Hier begint het missie en visie gedeelte -->
         <section class="about" id="about">
             <h2>Over Verboon Productions</h2>
             <div class="bio">
@@ -135,7 +190,7 @@
                         <img class="gallery-picture" src="assets/sportschool_1.jpg" />
                         <img class="gallery-picture" src="assets/sportschool_2.jpg" />
                         <img class="gallery-picture" src="./assets/sportschool_4.jpg" />
-                            <!-- Add more images here -->
+                        <!-- Je kunt evt meer foto's toevoegen -->
                     </div>
 
             </article>
@@ -145,30 +200,37 @@
                     <img class="modal-image" src="" alt="Modal Image">
                 </div>
             </div>
-
         </section>
+        <!-- einde missie en visie gedeelte -->
 
+        <!-- Hier begint het contact form -->
         <section class="contact" id="contact">
             <h2>Jouw project</h2>
             <p>Ben je op zoek naar iets unieks? Iets waar je met trots naar terug wilt kijken? Wil je je
                 website of bedrijfsvideo naar een hoger niveau tillen?</p>
-            <p>Neem contact met me op en we
-                bespreken samen de mogelijkheden.</p>
-            <form name="Contact" method="POST" data-netlify="true">
+            <p>Neem contact met me op en we bespreken samen de mogelijkheden.</p>
+            <form method="POST" id="form">
+                <input type="hidden" name="access_key" value="22b4be32-4d1a-4086-8955-76a6a66eff51">
+                <input type="hidden" name="subject" value="Nieuw bericht van verboonproductions.nl">
+                <input type="checkbox" name="botcheck" id="" style="display: none;">
                 <ul>
                     <li>
-                        <label><textarea name="Bericht" placeholder="Jouw bericht"></textarea></label>
+                        <label><textarea name="Bericht" placeholder="Jouw bericht" required></textarea></label>
                     </li>
                     <li class="input-fields">
-                        <label><input type="text" name="Naam" placeholder="Je naam" /></label>
-                        <label><input type="email" name="Emailadres" placeholder="Je emailadres" /></label>
+                        <label><input type="text" name="Naam" placeholder="Je naam" required /></label>
+                        <label><input type="email" name="Emailadres" placeholder="Je emailadres" required /></label>
                     </li>
+                    <div id="result"></div>
+
                     <li class="button">
                         <button type="submit">Verstuur bericht</button>
                     </li>
+
                 </ul>
             </form>
         </section>
+        <!-- einde formulier -->
     </main>
 
     <footer>
@@ -183,13 +245,11 @@
 
     </footer>
 
+    <!-- script tags voor Javascript -->
     <script src="scripts/scroll.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/galleryModal.js"></script>
+    <script src="scripts/form.js"></script>
 
 </body>
-
-
-
-
 </html>
